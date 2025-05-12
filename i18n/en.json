@@ -1,0 +1,14 @@
+{
+  "page_title": "Fastify SSR Demo",
+  "welcome_message": "Welcome to Our Application",
+  "app_description": "A server-side rendered application using Fastify and ESM modules",
+  "tab1_title": "Overview",
+  "tab1_content": "This is an overview of our products and services. We pride ourselves on delivering high-quality solutions to meet your needs.",
+  "tab2_title": "Features",
+  "tab2_content": "Explore the key features that make our offerings stand out from the competition.",
+  "tab3_title": "Contact",
+  "tab3_content": "Get in touch with our team for more information or support.",
+  "data_from_api": "Data From API",
+  "contact_info": "Contact Information",
+  "footer_text": "All rights reserved"
+}

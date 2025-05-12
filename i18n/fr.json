@@ -1,0 +1,14 @@
+{
+  "page_title": "Démo Fastify SSR",
+  "welcome_message": "Bienvenue sur Notre Application",
+  "app_description": "Une application rendue côté serveur utilisant Fastify et des modules ESM",
+  "tab1_title": "Aperçu",
+  "tab1_content": "Voici un aperçu de nos produits et services. Nous sommes fiers de proposer des solutions de haute qualité pour répondre à vos besoins.",
+  "tab2_title": "Fonctionnalités",
+  "tab2_content": "Découvrez les fonctionnalités clés qui distinguent nos offres de la concurrence.",
+  "tab3_title": "Contact",
+  "tab3_content": "Contactez notre équipe pour plus d'informations ou d'assistance.",
+  "data_from_api": "Données de l'API",
+  "contact_info": "Informations de Contact",
+  "footer_text": "Tous droits réservés"
+}

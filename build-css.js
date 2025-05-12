@@ -1,0 +1,126 @@
+// Simple script to generate a basic CSS file with Tailwind utility classes
+import fs from 'fs/promises';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Output file path
+const outputFile = join(__dirname, 'public', 'css', 'tailwind.css');
+
+// Create a simple CSS file with basic Tailwind-like utility classes
+const generateBasicCSS = async () => {
+  console.log('Generating basic CSS file...');
+  
+  try {
+    // Basic CSS inspired by Tailwind utilities (a minimal subset)
+    const css = `
+/* Basic Tailwind-inspired CSS (minimal subset) */
+/* Base styles */
+*, ::before, ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+/* Typography */
+.text-3xl { font-size: 1.875rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-xl { font-size: 1.25rem; }
+.text-lg { font-size: 1.125rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+
+/* Colors */
+.text-white { color: #fff; }
+.text-gray-800 { color: #1f2937; }
+.text-gray-700 { color: #374151; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-500 { color: #6b7280; }
+.text-blue-600 { color: #2563eb; }
+.text-blue-500 { color: #3b82f6; }
+.text-red-500 { color: #ef4444; }
+.bg-white { background-color: #fff; }
+.bg-gray-100 { background-color: #f3f4f6; }
+.bg-gray-200 { background-color: #e5e7eb; }
+.bg-gray-50 { background-color: #f9fafb; }
+.bg-blue-500 { background-color: #3b82f6; }
+
+/* Layout */
+.container { width: 100%; }
+.min-h-screen { min-height: 100vh; }
+.p-8 { padding: 2rem; }
+.p-6 { padding: 1.5rem; }
+.p-4 { padding: 1rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.pt-4 { padding-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mr-2 { margin-right: 0.5rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-md { max-width: 28rem; }
+.space-x-4 > * + * { margin-left: 1rem; }
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.gap-4 { gap: 1rem; }
+.hidden { display: none; }
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.inline-block { display: inline-block; }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded-t-lg { border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem; }
+.rounded { border-radius: 0.25rem; }
+.border-b { border-bottom-width: 1px; }
+.border-b-2 { border-bottom-width: 2px; }
+.border-gray-200 { border-color: #e5e7eb; }
+.border-transparent { border-color: transparent; }
+.border { border-width: 1px; }
+.border-blue-600 { border-color: #2563eb; }
+.list-disc { list-style-type: disc; }
+.pl-5 { padding-left: 1.25rem; }
+
+/* Hover */
+.hover\:text-gray-600:hover { color: #4b5563; }
+.hover\:border-gray-300:hover { border-color: #d1d5db; }
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Active state for tabs */
+.active.text-blue-600 { color: #2563eb; }
+.active.border-blue-600 { border-color: #2563eb; }
+`;
+    
+    // Write the CSS to the output file
+    await fs.writeFile(outputFile, css);
+    console.log('Basic CSS file generated successfully!');
+  } catch (error) {
+    console.error('Error generating CSS file:', error);
+  }
+};
+
+// Run the generator
+generateBasicCSS();

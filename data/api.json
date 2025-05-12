@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Product A",
+      "description": "A high-quality product with excellent features"
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "description": "An affordable option with good performance"
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "description": "Premium product with advanced capabilities"
+    }
+  ],
+  "features": [
+    {
+      "title": "Fast Performance",
+      "description": "Optimized for speed and efficiency"
+    },
+    {
+      "title": "Easy Integration",
+      "description": "Simple to incorporate into existing systems"
+    },
+    {
+      "title": "Scalable Solution",
+      "description": "Grows with your business needs"
+    },
+    {
+      "title": "Reliable Support",
+      "description": "24/7 assistance from our expert team"
+    }
+  ],
+  "contact": {
+    "email": "support@example.com",
+    "phone": "+1 (555) 123-4567"
+  }
+}
